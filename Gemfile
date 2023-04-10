@@ -43,6 +43,8 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov'
+  gem 'net-http'
+  gem 'orderly'
 end
 
 group :development do
