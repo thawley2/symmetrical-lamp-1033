@@ -36,6 +36,13 @@ RSpec.describe 'supermarkets/:id', type: :feature do
       expect(page).to have_content('Jeff').once 
       expect(page).to have_content('Steve').once 
       expect(page).to_not have_content('Frank') 
+
+      visit "/supermarkets/#{sams.id}"
+
+      expect(page).to have_content('Jeff').once
+      expect(page).to_not have_content('Thomas')
+      expect(page).to_not have_content('Steve')
+      expect(page).to_not have_content('Frank')
     end
   end
 end
