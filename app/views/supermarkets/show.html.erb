@@ -1,0 +1,10 @@
+<h1>Supermarket Show</h1>
+<br>
+<h2><%= @supermarket.name %></h2>
+
+Customers:
+<ul>
+  <% @supermarket.all_customers.each do |customer| %>
+    <li><%= customer %></li>
+  <% end %>
+</ul>
