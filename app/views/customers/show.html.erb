@@ -13,3 +13,11 @@
     </li>
   <% end %>
 </ul>
+
+<br>
+<h3>Add Item:</h3>
+<%= form_with url: "/customers/#{@customer.id}", local: true do |f| %>
+  <%= f.label :item, "Item Id:" %>
+  <%= f.text_field :item %>
+  <%= f.submit 'Submit' %>
+<% end %>
