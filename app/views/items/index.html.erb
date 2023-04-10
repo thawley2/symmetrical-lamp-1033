@@ -1,0 +1,14 @@
+<h1>Items Index</h1>
+
+<ul>
+  <% @items.each do |item| %>
+    <li id="item_<%= item.id %>">
+      <%= item.name %>
+      <ul>
+        <li>Price: <%= item.price %></li>
+        <li>Supermarket: <%= item.supermarket.name %>
+        <li>Purchase Count: <%= item.customer_count %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
